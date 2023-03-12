@@ -121,14 +121,14 @@ private extension BeerListViewController {
 
 // For Preview
 struct BeerListViewControllerContainer: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> UITableViewController {
-        let viewController = BeerListViewController()
+    func makeUIViewController(context: Context) -> UINavigationController {
+        let viewController = UINavigationController(rootViewController: BeerListViewController())
         return viewController
     }
     
-    func updateUIViewController(_ uiViewController: UITableViewController, context: Context) { }
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) { }
     
-    typealias UIViewControllerType = UITableViewController
+    typealias UIViewControllerType = UINavigationController
 }
 
 struct BeerListViewController_Previews: PreviewProvider {
